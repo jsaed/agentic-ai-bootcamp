@@ -46,4 +46,4 @@ After completing the above steps, you will be sent an invitation to join the IBM
 
 ❗ Click `Join now` to accept the invite. You will be asked to log into IBM Cloud (use the IBMid credentials created earlier).
 
-**That's it! Congratuations, you're ready to get started with the Labs!
+**That's it! Congratuations, you're ready to get started with the Labs!**

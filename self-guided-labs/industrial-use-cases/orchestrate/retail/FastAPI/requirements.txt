@@ -1,0 +1,7 @@
+fastapi
+dotenv
+langgraph
+langchain_ibm
+uvicorn
+langchain_community
+pydantic

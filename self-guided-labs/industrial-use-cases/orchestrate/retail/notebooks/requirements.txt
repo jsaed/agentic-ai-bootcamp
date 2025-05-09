@@ -1,0 +1,14 @@
+PIL
+argparse
+base64
+dotenv
+ibm_watsonx_ai
+io
+langchain_community
+langchain_core
+langchain_ibm
+langgraph
+matplotlib
+os
+re
+requests
