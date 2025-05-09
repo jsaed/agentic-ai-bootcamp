@@ -1,42 +1,31 @@
-# Saudi Aramco - Society of Petroleum Engineers (SPE) Technical Hands-on Labs
+# Riyadh Air - Agentic AI Technical Hands-on Labs
 
 ![screenshot](./images/Riyadh_Air_Logo.svg.png)
 
-## Welcome to the IBM watsonx.ai Workshop!
+### 🧠 What is the Agentic AI Bootcamp?
 
-This hands-on workshop is designed to help you explore the [IBM watsonx.ai](https://dataplatform.cloud.ibm.com/wx) Platform and its powerful AI capabilities. You’ll learn how to build, deploy, and manage AI models with ease. Whether you're new to AI or an experienced practitioner, this workshop will provide you with the tools and knowledge to streamline the AI application development process with IBM watsonx.ai.
+The Agentic AI Bootcamp is a hands-on, modular learning experience designed by IBM Client Engineering for Clients & Ecosystem. This bootcamp empowers you to explore and experiment with cutting-edge GenAI technologies to build AI-powered agents and workflows tailored to your needs.
 
-**Workshop details:**
-- **Dates**: 25th-27th February 2025
-- **Contacts**: [Muqbil Alkhalaf](muqbil@ibm.com), [Jama Ahmed Saed](jama@ibm.com), [Abdullah Alhassoun](Abdullah.Alhassoun@ibm.com)
+### 🔥 Technologies Covered
 
-## (Optional) Pre-requisites
-Prior to attending the workshop - you may find it useful to review the compiled [reading material](reading-material.md) (including video series) to familiarise yourself with IBM watsonx.ai, the basics of Foundation Models and Generative AI and IBM's Foundation Model Strategy.
+This Bootcamp covers a rich ecosystem of AI technologies, including:
 
-### IBM watsonx.ai Workshop Agenda
+✅ [IBM watsonx Orchestrate](https://www.ibm.com/watsonx/orchestrate) – Automate business workflows with AI agents \
+✅ [IBM watsonx.ai](https://www.ibm.com/watsonx/ai) – Build, deploy, and fine-tune AI models \
+✅ [IBM Agent Lab](https://www.ibm.com/docs/en/watsonx/saas?topic=solutions-agent-lab-beta) – Experiment with AI agents in an interactive environment \
+✅ [LangGraph](https://github.com/langchain-ai/langgraph) – Build AI workflows using LangChain’s graph-based framework \
+✅ [IBM BeeAI](https://github.com/i-am-bee/beeai-framework) – IBM Research’s cutting-edge AI experimentation framework \
+✅ [CrewAI](https://github.com/ai-crew/crewAI) – Multi-agent collaboration made easy \
+... and much more! 🚀
 
-<details>
-<summary><b>Day 1</b></summary>
+###  📌 Getting Started
+1️⃣ **Complete the Setup Activities** – Run the Labs in a ready-to-use environment \
+2️⃣ **Pick Your Labs** – Choose from the list of Labs, general use-cases or industry-specific \
+3️⃣ **Use Our MURAL [Template](https://app.mural.co/template/e193e58d-71f9-4955-b70a-b0486834d442/fa3056a9-b0ce-45a3-bbf1-dbaa12fc0d0c)** – Bring Your Own Use Case and design your Agentic AI workflows \
+4️⃣ **Build, Test, and Iterate!** – Experiment, refine, and enhance your AI solutions
 
-| Name                                                       | Lab / Tutorial | Description                                                                                                                                                                                                                           | Tasks                                                                                                                                                                                                                          | Duration   |
-|------------------------------------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-| [**0. Setup watsonx.ai**](./self-guided-labs/lab-0-setup-watsonxai/README.md)   | *Tutorial*     | Following the instructions to log in to watsonx.ai and configure your development environment.                                                                                  | • Log in to watsonx.ai. <br> • Enable API key. <br> • Create a Project.                                                                                                                 | 30 mins |
-| [**1. Explore Prompt Lab**](./self-guided-labs/lab-1-prompt-lab-intro/README.md)   | *Tutorial*     | Learn how to use the Prompt Lab in watsonx.ai. You'll explore multiple ways to prompt foundation models and experiment with different prompts, model parameters, and deployment options.                                                 | • Use Prompt Lab in Freeform mode. <br> • Use Prompt Lab in Structured mode. <br> • Experiment with sample prompts. <br> • Adjust model parameters and save your work.                                                            | 30 mins |
-| [**2. Chat with Documents and Images**](./self-guided-labs/lab-2-chat-with-documents/README.md)   | *Tutorial*     | Learn to chat with documents and images using the Grounding with Documents feature in watsonx.ai. This lab will focus on adding documents and images for AI-driven interactions.                                                       | • Chat with uploaded documents. <br> • Chat with uploaded images. <br> • Use vision models to check image safety.                                                                                 | 30 mins |
-| [**3. Prompt Engineering Challenge**](./self-guided-labs/lab-3-prompt-engineering/README.md)   | *Lab*          | Tackle a prompt engineering challenge where you will modify a given prompt to achieve specific objectives, such as sentiment analysis or extracting specific data.                                                                       | • Sentiment analysis on customer review. <br> • Emotion analysis in CSV format. <br> • Extract items purchased in JSON format. <br> • Combine multiple analyses in a single prompt. | 60 mins |
+### 🤝 Need Help?
+If you face any issues, or have any questions, reach out to **Client Engineering Saudi Advisory Squad**.
 
-</details>
-
-<details>
-<summary><b>Day 2</b></summary>
-
-| Name                                                       | Lab / Tutorial | Description                                                                                                                                                                                                                           | Tasks                                                                                                                                                                                                                          | Duration   |
-|------------------------------------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-| [**4. Retrieval-Augmented Generation (RAG)**](./self-guided-labs/lab-4-rag/README.md)   | *Tutorial*     | Learn to implement the RAG pattern using the watsonx.ai Prompt Lab. You'll use Elasticsearch and embedding models to enhance text retrieval and generation tasks.                                                              | • Create an Elasticsearch index. <br> • Add a document to the index. <br> • Query and interact with the document. <br> • Deploy as an AI service with API key.                                                              | 60 mins |
-| [**5. Intro to LangChain and watsonx.ai Python SDK**](./self-guided-labs/lab-5-langchain-intro/README.md)   | *Lab*          | Apply prompt engineering knowledge using the watsonx.ai Python SDK and LangChain to streamline interactions with the model. Explore best practices in developing AI-driven solutions.                                                        | • Use LangChain to simplify prompt interaction. <br> • Build personalized recommendations using the SDK.                                                                               | 30 mins |
-| [**6. Intro to AutoRAG**](./self-guided-labs/lab-6-intro-to-autorag/README.md)   | *Lab*          | Learn to use AutoAI for building optimized RAG systems. The AutoRAG tool helps automate RAG pipeline creation and performance evaluation to find the best solution for your use case.                                                     | • Automatically build RAG pipeline experiments. <br> • Optimize metrics according to use case. <br> • Assess results and select the top-performing configuration.                | 30 mins |
-| [**7. Time Series Analysis**](./self-guided-labs/lab-7-time-series-data/README.md)   | *Lab*          | Learn about the IBM watsonx.ai Timeseries Forecasting API and SDK and use the watsonx.ai Time Series Forecasting API to predict energy demand.                         | • Load and prepare the dataset. <br> • Select a Granite Timeseries Foundation Model from watsonx.ai. <br> • Forecasting using your model. | 30 mins  |
-| [**8. Explore Agent Builder Lab**](./self-guided-labs/lab-8-agent-builder-lab/README.md)   | *Lab*          | Work with IBM watsonx.ai Agent Builder, low-code developer tools for building agentic services. Build and deploy AI Agents that can be used to make your applications more flexible and dynamic.                         | • IBM watsonx.ai Agent Builder. | 30 mins  |
-| [**9. Use Case Discovery**](./self-guided-labs/lab-9-use-case-discovery/README.md)   | *Lab*          | Define a real-world AI use case in the oil and gas industry, leveraging all the tools learned (Prompt Engineering, RAG, and AutoRAG). Design a solution architecture, build an MVP, and evaluate its performance.                         | • Discover and define an oil and gas-related use case. <br> • Design solution architecture. <br> • Build the MVP using prompt engineering, RAG, and AutoRAG. <br> • Evaluate and present your solution. | 2-3 hours  |
-
-</details>
+### 🧠 (Optional) Reading Material
+You may find it useful to review the compiled [reading material](reading-material.md) (including video series) to familiarise yourself with IBM watsonx.ai, the basics of Foundation Models and Generative AI and IBM's Foundation Model Strategy.
