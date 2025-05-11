@@ -10,7 +10,6 @@ Through a series of exercises, you will learn how to:
 * Use Large Language Models (LLMs) in your agent
 * Use tools to access information not previously trained into the LLM
 * Trace the agent's ReAct process
-* Incorporate business logic into your agent using custom tools
 
 ## Contents
 
@@ -24,9 +23,7 @@ Through a series of exercises, you will learn how to:
     - [Step 2: Add a `Google search` tool](#step-2-add-a-google-search-tool)
     - [Step 3: Add a `Webcrawler` tool](#step-3-add-a-webcrawler-tool)
     - [Step 4: Ingest documents for Q\&A](#step-4-ingest-documents-for-qa)
-    - [Step 5: Allow your agent to perform calculations](#step-5-allow-your-agent-to-perform-calculations)
-    - [Step 6: Add a Custom Tool](#step-6-add-a-custom-tool)
-    - [Step 7: Deploy your Agent](#step-7-deploy-your-agent)
+    - [Step 5: Deploy your Agent](#step-7-deploy-your-agent)
   - [Conclusion](#conclusion)
   - [Additional Resources](#additional-resources)
 
@@ -37,10 +34,10 @@ You must have access to a watsonx.ai SaaS environment and an initialized project
 
 ## Lab Objectives
 
-* Create a custom tool to access information not previously trained into an LLM
+* Use the Google tool to extract information referencing the latest informarion on the internet
 * Use the WebCrawler tool to extract information from a specific web page
-* Integrate a Python interpreter to perform complex calculations
-* Use RAG to incorporate new information into an existing agent* Deploy an agent with a custom tool to incorporate business logic
+* Use RAG to incorporate new information into an existing agent
+* Deploy an agent with a custom tool to incorporate business logic
 
 ## Lab Instructions
 
@@ -142,75 +139,7 @@ But Billie needs some more details, what if she had a specific document that she
 
 **Note** that your agent uses the `RAGQuery` tool to answer your question from the document.
 
-### Step 5: Allow your agent to perform calculations
-
-What if Billie, got a question from a customer on a loan product that they'd newly inherited?
-
-1. In the **Tools** section, click **Add a tool** and select the **Python interpreter** tool that the agent framework can invoke to compose a response.
-
-2. Test your agent in the **Agent preview** pane to make sure the agent generates the correct result by using a combination of the foundation model and the relevant tools. You can now ask:
-
-    ```
-    What are the monthly repayments on a $948,000 loan at an interest rate of 5.85% over 30 years
-    ```
-
-**Note** that your agent is translating your query into a python calculation that he then performs to answer your question.
-
-### Step 6: Add a Custom Tool
-
-Now let's say that the Bank introduces a new wealth builder fee of `$3000` over the life of the loan which gets added onto monthly payments, how could Billie factor this into her agent? This is where custom tools come in.
-
-1. In the **Tools** section, click **Create custom tool**.
-   1. **Name**: Enter `Repayment Calculation`
-   2. **Tool description**:
-        ```
-        Tool that calculates morgage repayments.
-        ```
-        **Note**: this description is very important, it will be used by the LLM to know when to call this custom tool.
-   3. **Input JSON Schema**:
-        ```json
-        {
-        "principal": {
-            "title": "Principal loan amount",
-            "description": "The total loan amount",
-            "type": "number"
-        },
-        "interest_rate": {
-            "title": "Yearly interest rate",
-            "description": "The yearly interest rate to be charged",
-            "type": "number"
-        },
-        "period": {
-            "title": "Loan Period",
-            "description": "The length of the loan in years.",
-            "type": "integer"
-        }
-        }
-        ```
-        **Note**: this schema is very important, it will be used by the LLM to know how to call this tool with the required input parameters.
-   4. **Python code**:
-
-        ```py
-        def monthly_repayment(principal: float, interest_rate: float, period: int):
-            interest_rate = interest_rate / 100
-            return (
-                principal
-                * (interest_rate / 12 * (1 + interest_rate / 12) ** (period * 12))
-                / ((1 + interest_rate / 12) ** (period * 12) - 1)
-            ) + 3000 / period
-        ```
-
-2. Test your agent in the **Agent preview** pane to make sure the agent generates the correct result by using a combination of the foundation model and the relevant tools. You can now ask:
-
-    ```
-    What are the monthly repayments on a $948,000 loan at an interest rate of 5.85% over 30 years.
-    ```
-
-    ![image](./images/agentlab-6.png)
-
-**Note** that your agent is translating your query into a python calculation that he then performs to answer your question.
-
-### Step 7: Deploy your Agent
+### Step 5: Deploy your Agent
 
 You are now ready to deploy your agent as a new AI service:
 
@@ -225,7 +154,7 @@ This concludes the lab exercise.
 
 ## Conclusion
 
-In this hands-on lab, you learned how to build agentic workflows using AgentLab. You created custom tools, used the WebCrawler tool, integrated a Python interpreter, used RAG, and deployed an agent with a custom tool. By applying these skills, you can automate tasks and make informed decisions in your own organization.
+In this hands-on lab, you learned how to build agentic workflows using AgentLab. You used the WebCrawler tool, used RAG, and deployed an agent with a custom tool. By applying these skills, you can automate tasks and make informed decisions in your own organization.
 
 ## Additional Resources
 
