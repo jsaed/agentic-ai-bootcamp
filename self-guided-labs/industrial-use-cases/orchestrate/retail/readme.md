@@ -5,7 +5,7 @@ This lab demonstrates an **Agentic AI workflow** using **LangGraph** and IBM wat
 
 The main components include:
 - **LangGraph Framework**: Implements AI-driven workflows.
-- **IBM Watsonx Orchestrate**: Provides AI agent orchestration capabilities.
+- **IBM watsonx Orchestrate**: Provides AI agent orchestration capabilities.
 - **Tavily Search API**: Enables web-based information retrieval.
 - **Image Processing with watsonx.ai**: Extracts insights from store shelf images.
 

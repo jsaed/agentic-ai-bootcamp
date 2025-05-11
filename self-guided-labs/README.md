@@ -15,11 +15,11 @@ In this bootcamp, you will build and deploy an Agentic AI application prototype 
 
 - [**General Use Cases**](./general-use-cases/)
     - watsonx Orchestrate
-        - [AskHR](./general-use-cases/orchestrate/AskHR/) 
+        - [Florin - AskHR](./general-use-cases/orchestrate/AskHR/) 
 - [**Industry Use Cases**](./industrial-use-cases/)
     - watsonx Orchestrate
-        - [Travel](./industrial-use-cases/orchestrate/travel/)
-        - [Retail](./industrial-use-cases/orchestrate/retail/)
+        - [Sabtain - Travel (No-Code)](./industrial-use-cases/orchestrate/travel/)
+        - [EMEA - Retail (Code - LangGraph)](./industrial-use-cases/orchestrate/retail/)
     - watsonx Agent Lab
-        - [Travel](./industrial-use-cases/watsonx.ai-AgentLab/travel/)
-        - [Banking](./industrial-use-cases/watsonx.ai-AgentLab/banking/)
+        - [Florin - Travel (Low Code - wx.ai Agent Lab)](./industrial-use-cases/watsonx.ai-AgentLab/travel/) - NEED TO BE TESTED TOMORROW WHEN GITHUB.IBM.COM IS BACK UP AND RUNNING
+        - [Khawlah/Raghad - Banking (No-Code - wx.ai Agent Lab)](./industrial-use-cases/watsonx.ai-AgentLab/banking/)
