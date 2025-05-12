@@ -43,7 +43,7 @@ Navigate to **Toolset** → click **Add tool**
 
 ### 5. Select **Import an external too**l**. and upload
 
-   - [`list_hotels_location.json`](./hotel-booking-agent/list_hotels_location.json)
+   - [`list_hotels_location.json`](./hotel-booking-agent/tools/list_hotels_location.json)
    Check the Operation (*POST - Get list of hotels in a city*) and Click **Done**.
 
    This tools allows the agent to: \
@@ -55,7 +55,7 @@ Navigate to **Toolset** → click **Add tool**
 ![import-tool-1.png](./images/import-tool-1.png)
 
 ### 6. Repeat this step to add a second tool:  
-   - [`hotel_booking_confirmation.json`](./hotel-booking-agent/hotel_booking_confirmation.json)
+   - [`hotel_booking_confirmation.json`](./hotel-booking-agent/tools/hotel_booking_confirmation.json)
    Check the Operation (*POST - Confirm hotel booking*) and Click **Done**.
 
    This tools allows the agent to: \
@@ -89,15 +89,15 @@ Navigate to **Toolset** → click **Add tool**
      ```
 
 2. Now lets give our agent access to some tools to help it accomplish tasks. We'll be using OpenAPI specification files to define API tools for our agents.
-   - [`Country_code.JSON`](./travel-agent/country_code.json) - The agent uses this tool to retrieve the **ISO country code** (e.g. "`US`" for the United States) based on a user-provided country name. This will be used as a lookup step to feed other APIs requiring a country code.
+   - [`Country_code.JSON`](./travel-agent/tools/country_code.json) - The agent uses this tool to retrieve the **ISO country code** (e.g. "`US`" for the United States) based on a user-provided country name. This will be used as a lookup step to feed other APIs requiring a country code.
 
-   - [`cities_api.json`](./travel-agent/cities_api.json) - The agent calls this tool to get a list of **major cities** within a specified country or region.
+   - [`cities_api.json`](./travel-agent/tools/cities_api.json) - The agent calls this tool to get a list of **major cities** within a specified country or region.
 
-   - [`Country_info.JSON`](./travel-agent/Country_info.JSON) - This tool gives the agent** general information** about a country, such as **population**, **capital**, **area**, and **currency**. It’s used when a user asks questions like “Tell me about Spain” or “What’s the capital of Brazil?”.
+   - [`Country_info.JSON`](./travel-agent/tools/Country_info.JSON) - This tool gives the agent** general information** about a country, such as **population**, **capital**, **area**, and **currency**. It’s used when a user asks questions like “Tell me about Spain” or “What’s the capital of Brazil?”.
 
-   - [`weather_info_demo.json`](./travel-agent/weather_info_demo.json) - The agent uses this to provide **current weather** conditions (`temperature`, `humidity`, etc.) for a specific city. It's best suited for answering user prompts like “*What’s the weather in Rome right now?*”
+   - [`weather_info_demo.json`](./travel-agent/tools/weather_info_demo.json) - The agent uses this to provide **current weather** conditions (`temperature`, `humidity`, etc.) for a specific city. It's best suited for answering user prompts like “*What’s the weather in Rome right now?*”
 
-   - [`weather_forecast_week.json`](./travel-agent/weather_forecast_week.json) - This tool returns a **7-day weather forecast** for a given city. The agent uses it to respond to queries like “*What’s the weather like in Tokyo this week?*” to support travel planning tasks.
+   - [`weather_forecast_week.json`](./travel-agent/tools/weather_forecast_week.json) - This tool returns a **7-day weather forecast** for a given city. The agent uses it to respond to queries like “*What’s the weather like in Tokyo this week?*” to support travel planning tasks.
 
 3. Let's test with sample prompts:
    - What are the major cities in Saudi?
@@ -112,8 +112,59 @@ Navigate to **Toolset** → click **Add tool**
 
 With access to structured or curated **domain knowledge**, the agent can provided tailored assistance.
 
+To add the following documents files as knowledge, click **Upload Files**:
    - `City Info.xlsx`
    - `Flight Booking Tips for Smart Travelers.docx`
    - `General Travel Information for International Travelers.docx`
 
-4. Add usage description:
+![upload-knowledge.png](./images/upload-knowledge.png)
+
+Then add a description for the uploaded knowledge:
+A clear and detailed knowledge description is required for the agent to understand when to use the knowledge—leading to more accurate and relevant responses for users.
+
+```
+Refer to the documentation
+- when the user asks about the cities in a country OR
+- when the user asks for best tips on flight booking or when asked some generic information about the travel
+```
+
+Optionally, modify the Knowledge Settings to customise how the Agent will utilise the knowledge documents:
+
+![knowledge-settings.png](./images/knowledge-settings.png)
+
+---
+### Part 3: Add the Hotel Booking Agent as a Collaborator Agent
+
+Now let's add the **Hotel Booking Agent** we created earlier to the **Travel Agent** to extend its scope.
+
+Under Agents, click `Add agent`:
+
+![add-agent.png](./images/add-agent.png)
+
+Select `Add from local instance` to choose from a list of agents available:
+
+![select-agent.png](./images/select-agent.png)
+
+Click `Add to agent`.
+
+Great! The Hotel Booking Agent is now available to the Travel Agent for task delegation and collaboration.
+
+---
+### Part 4: Deploy & Test the Multi-Agent Collaboration via Chat
+
+Click the top-right corner button `Deploy` the Travel Agent.
+
+![navigate-chat.png](./images/deploy.png)
+
+Fantasitc! The **Travel Agent** is now available to the Orchestrator Agent for task delegation.
+
+Let's navigate to the `Chat`.
+
+![navigate-chat.png](./images/navigate-chat.png)
+
+   - What are the major cities in Saudi?
+   - What's the weather like in Riyadh today?
+   - How about for the next week?
+   - Cool. Provide me the best hotels there
+   - Let's go with the cheapest one there, for 3 nights.
+   - I will be travelling with my daughters
