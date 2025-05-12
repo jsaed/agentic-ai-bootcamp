@@ -1,94 +1,106 @@
-# Hands-on Lab: watsonx.Orchestrate Travel & Hotel Booking Agent
+# Hands-on Lab: Travel & Hotel Booking Agent
 
 ## Introduction
+In this hands-on lab, you will learn how to build agentic workflows using **watsonx.Orchestrate**, a powerful tool for creating custom AI-powered agents. You will follow the story of a traveller who is planning their upcoming vacation.
 
-In this hands-on lab, you will learn how to build agentic workflows using watsonx.Orchestrate, a powerful tool for creating custom AI-powered agents. You will follow the story of a traveller who is planning their upcoming vacation.
+- [Part 1: Create the Hotel Booking Agent](#part-1-create-the-hotel-booking-agent)
+- [Part 2: Create the Travel Agent](#part-2-create-the-travel-agent)
+- [Part 3: Add the Hotel Booking Agent as a Collaborator](#part-3-add-the-hotel-booking-agent-as-a-collaborator)
+- [Part 4: Deploy & Test the Multi-Agent Collaboration](#part-4-deploy--test-the-multi-agent-collaboration)
 
-###  📌 Getting Started
+---
 
-#### Launch **watsonx.Orchestrate**
+### 🔹 Launch watsonx.Orchestrate
+1. Navigate to [IBM Cloud](https://cloud.ibm.com/resources)
 
-Navigate to the [Attendee URL](https://techzone.ibm.com/my/workshops/student/681a3aba796fbe5a44f84c30) to get your environment details for **watsonx.Orchestrate** and click `Launch watsonx Orchestrate`.
+Expand the `AI/Machine Learning` and select `Watson Orchestrate-itz`.
 
-![launch.wxo.png](./images/launch.wxo.png)
+![resource-list.png](../../../lab-0-setup-activities/images/resource-list.png)
 
-This will launch the **watsonx.Orchestrate** Main Page.
+2. Click `Launch watsonx Orchestrate` to open the main page.
 
-### Part 1: Create the Hotel Booking Agent
+![Launch Orchestrate](./images/launch.wxo.png)
 
-### 1. Click **Create new agent**
+---
 
-![create-agent.png](./images/create-agent.png)
+## Part 1: Create the Hotel Booking Agent
 
-### 2. Select **Create from scratch**  
-   - Name: `Hotel Booking Agent`  
-   - Description:
-     ```
-     You are an AI Agent that helps the user to:
-     - Search the major cities in a country
-     - Get the weather info for a selected city
-     - Get hotels in that city via a collaborator agent
-     - Book hotels as per user requirements via the collaborator agent
-     Do not execute repeated tools.
-     I want the response in Form structure rather than plain JSON.
-     ```
+### 1. Create the Agent
+- Click **Create new agent**
+- Select **Create from scratch**
+- Fill in:
+  - **Name:** `Hotel Booking Agent`
+  - **Description:**
+    ```
+    You are an AI Agent that helps the user to:
+    - Search the major cities in a country
+    - Get the weather info for a selected city
+    - Get hotels in that city via a collaborator agent
+    - Book hotels as per user requirements via the collaborator agent
+    Do not execute repeated tools.
+    I want the response in Form structure rather than plain JSON.
+    ```
+- Click **Create**
 
-### 3. Click **Create**
+![Create Agent](./images/create-agent.png)
 
-![create-from-scratch.png](./images/create-from-scratch.png)
+### 2. Now lets give our agent access to some tools to help it accomplish tasks. We'll be using OpenAPI specification files to define API tools for our agents.
 
-### 4. Now lets give our agent access to some tools to help it accomplish tasks. We'll be using OpenAPI specification files to define API tools for our agents.
+### Tool 1: List Hotels in a City
+- Navigate to **Toolset** → click **Add tool**
+- Select **Import an external tool**
+- Upload [`list_hotels_location.json`](./hotel-booking-agent/tools/list_hotels_location.json)
+- Check the *POST - Get list of hotels in a city* operation
+- Click **Done**
 
-Navigate to **Toolset** → click **Add tool**
-
-### 5. Select **Import an external too**l**. and upload
-
-   - [`list_hotels_location.json`](./hotel-booking-agent/tools/list_hotels_location.json)
-   Check the Operation (*POST - Get list of hotels in a city*) and Click **Done**.
-
-   This tools allows the agent to: \
-    - Understand **when** to use this tool (e.g. when user says "Find hotels in Riyadh") \
-    - Know **what input to collect** (`city`) \
-    - Know **how to call the API** (`POST` to /`list-hotels` with JSON body) \
-    - Know **how to parse the result** (hotel `names`, `rates`, etc.)
+This tools allows the agent to:
+- Understand **when** to use this tool (e.g. when user says "Find hotels in Riyadh") \
+- Know **what input to collect** (`city`) \
+- Know **how to call the API** (`POST` to /`list-hotels` with JSON body) \
+- Know **how to parse the result** (hotel `names`, `rates`, etc.)
 
 ![import-tool-1.png](./images/import-tool-1.png)
 
-### 6. Repeat this step to add a second tool:  
-   - [`hotel_booking_confirmation.json`](./hotel-booking-agent/tools/hotel_booking_confirmation.json)
-   Check the Operation (*POST - Confirm hotel booking*) and Click **Done**.
+### Tool 2: Confirm Hotel Booking
+- Upload [`hotel_booking_confirmation.json`](./hotel-booking-agent/tools/hotel_booking_confirmation.json)
+- Check the *POST - Confirm hotel booking* operation
+- Click **Done**
 
-   This tools allows the agent to: \
-    - When to** use this tool** (e.g. after user says “`Book this hotel from July 1 to July 4`”) \
-    - What **input fields** to collect \
-    - How to **call the endpoint** with structured `JSON` \
-    - What kind of **response to interpret** and **how to use it** (e.g. display `confirmation_id`) \
-    - How to **handle errors** (e.g. bad date range)
+This tools allows the agent to:
+- When to **use this tool** (e.g. after user says “`Book this hotel from July 1 to July 4`”) \
+- What **input fields** to collect \
+- How to **call the endpoint** with structured `JSON` \
+- What kind of **response to interpret** and **how to use it** (e.g. display `confirmation_id`) \
+- How to **handle errors** (e.g. bad date range)
 
 ![uploaded-tools.png](./images/uploaded-tools.png)
 
-### 7. Test with a sample prompt:  
-   `"Provide me the best hotels in Riyadh"`
+### 3. Test the Agent
+Sample prompt: `"Provide me the best hotels in Riyadh"`
 
-![hotel-agent-test.png](./images/hotel-agent-test.png)
+![Test Agent](./images/hotel-agent-test.png)
 
-### 8. Click **Deploy** to publish the agent and make it available for the Orchestrator Agent to utilise.
+### 4. Deploy the Agent
+Click **Deploy** to publish the agent for Orchestrator usage.
 
 ---
-### Part 2: Create the Travel Agent
 
-1. Repeat previous steps to create another agent:  
-   - Name: `Travel Agent`
-   - Description:
-     ```
-     You are an AI Agent that helps the user to:
-     - Get hotels in a city of user’s choice
-     - Book hotels as per user’s requirements
-     Do not execute repeated tools.
-     I want the response in Form structure rather than plain JSON.
-     ```
+## Part 2: Create the Travel Agent
 
-2. Now lets give our agent access to some tools to help it accomplish tasks. We'll be using OpenAPI specification files to define API tools for our agents.
+### 1. Create the Agent
+- Repeat the steps above with:
+  - **Name:** `Travel Agent`
+  - **Description:**
+    ```
+    You are an AI Agent that helps the user to:
+    - Get hotels in a city of user’s choice
+    - Book hotels as per user’s requirements
+    Do not execute repeated tools.
+    I want the response in Form structure rather than plain JSON.
+    ```
+
+### 2. Now lets give our agent access to some tools to help it accomplish tasks. We'll be using OpenAPI specification files to define API tools for our agents.
+
    - [`Country_code.JSON`](./travel-agent/tools/country_code.json) - The agent uses this tool to retrieve the **ISO country code** (e.g. "`US`" for the United States) based on a user-provided country name. This will be used as a lookup step to feed other APIs requiring a country code.
 
    - [`cities_api.json`](./travel-agent/tools/cities_api.json) - The agent calls this tool to get a list of **major cities** within a specified country or region.
@@ -99,72 +111,70 @@ Navigate to **Toolset** → click **Add tool**
 
    - [`weather_forecast_week.json`](./travel-agent/tools/weather_forecast_week.json) - This tool returns a **7-day weather forecast** for a given city. The agent uses it to respond to queries like “*What’s the weather like in Tokyo this week?*” to support travel planning tasks.
 
-3. Let's test with sample prompts:
-   - What are the major cities in Saudi?
-   - What's the weather like in Riyadh?
-   - How about for the next week?
+### 3. Test the Agent
+Try prompts like:
+- `What are the major cities in Saudi?`
+- `What's the weather like in Riyadh?`
+- `How about for the next week?`
 
-![travel-agent-test.png](./images/travel-agent-test.png)
+![Test Travel Agent](./images/travel-agent-test.png)
 
-4. Next, let's add a **Knowledge Base** to our Travel Agent:
+### 4. Next, let's add a **Knowledge Base** to our Travel Agent:
 
 **Knowledge bases** will ensure our Agent's responses are grounded in factual information. It reduces reliance on the model's memory alone and helps prevent hallucinations or vague answers. 
 
 With access to structured or curated **domain knowledge**, the agent can provided tailored assistance.
 
-To add the following documents files as knowledge, click **Upload Files**:
-   - `City Info.xlsx`
-   - `Flight Booking Tips for Smart Travelers.docx`
-   - `General Travel Information for International Travelers.docx`
+Click **Upload Files** and add:
+- `City Info.xlsx`
+- `Flight Booking Tips for Smart Travelers.docx`
+- `General Travel Information for International Travelers.docx`
 
-![upload-knowledge.png](./images/upload-knowledge.png)
-
-Then add a description for the uploaded knowledge:
-A clear and detailed knowledge description is required for the agent to understand when to use the knowledge—leading to more accurate and relevant responses for users.
-
+#### Knowledge Description:
 ```
-Refer to the documentation
+Refer to the documentation:
 - when the user asks about the cities in a country OR
 - when the user asks for best tips on flight booking or when asked some generic information about the travel
 ```
 
-Optionally, modify the Knowledge Settings to customise how the Agent will utilise the knowledge documents:
+![Upload Knowledge](./images/upload-knowledge.png)
 
-![knowledge-settings.png](./images/knowledge-settings.png)
+Optionally adjust **Knowledge Settings** to control how the agent uses the uploaded files.
 
----
-### Part 3: Add the Hotel Booking Agent as a Collaborator Agent
-
-Now let's add the **Hotel Booking Agent** we created earlier to the **Travel Agent** to extend its scope.
-
-Under Agents, click `Add agent`:
-
-![add-agent.png](./images/add-agent.png)
-
-Select `Add from local instance` to choose from a list of agents available:
-
-![select-agent.png](./images/select-agent.png)
-
-Click `Add to agent`.
-
-Great! The Hotel Booking Agent is now available to the Travel Agent for task delegation and collaboration.
+![Knowledge Settings](./images/knowledge-settings.png)
 
 ---
-### Part 4: Deploy & Test the Multi-Agent Collaboration via Chat
 
-Click the top-right corner button `Deploy` the Travel Agent.
+## Part 3: Add the Hotel Booking Agent as a Collaborator
 
-![navigate-chat.png](./images/deploy.png)
+1. Under **Agents**, click `Add agent`
+2. Select `Add from local instance`
+3. Choose `Hotel Booking Agent`
+4. Click `Add to agent`
 
-Fantasitc! The **Travel Agent** is now available to the Orchestrator Agent for task delegation.
+![Add Agent](./images/add-agent.png)
 
-Let's navigate to the `Chat`.
+The Travel Agent can now delegate hotel booking tasks to the Hotel Booking Agent.
 
-![navigate-chat.png](./images/navigate-chat.png)
+---
 
-   - What are the major cities in Saudi?
-   - What's the weather like in Riyadh today?
-   - How about for the next week?
-   - Cool. Provide me the best hotels there
-   - Let's go with the cheapest one there, for 3 nights.
-   - I will be travelling with my daughters
+## Part 4: Deploy & Test the Multi-Agent Collaboration
+
+1. Click **Deploy** on the Travel Agent
+2. Navigate to **Chat** and try prompts such as:
+   - `What are the major cities in Saudi?`
+   - `What's the weather like in Riyadh today?`
+   - `How about for the next week?`
+   - `Cool. Provide me the best hotels there`
+   - `Let's go with the cheapest one there, for 3 nights.`
+   - `I will be travelling with my daughters`
+
+Expand **Show Reasoning** to inspect how tools and agents were used.
+
+![Test Agent 1](./images/test-agent-1.png)
+![Test Agent 2](./images/test-agent-2.png)
+![Test Agent 3](./images/test-agent-3.png)
+
+
+## 🎉 Congratulations!
+You've completed the **watsonx.Orchestrate Travel & Hotel Booking Agent** Lab!
