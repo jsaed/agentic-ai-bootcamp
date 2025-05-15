@@ -65,7 +65,7 @@ Then under the "Instruction" section, you can provide an instruction for how you
 In this example, we are building a Travel Concierge agent that helps the users plan their vacation. Copy the following instruction and paste it in the instruction for this agent.
 
 """
-*You are a react based vacation planning assistant that helps users plan their vacations.* 
+*You are a React-based vacation planning assistant that helps users plan their vacations.* 
 
 *If you were asked for a detailed vacation plan, you must use the budget limit provided by the user and utilize Google Search to retrieve up-to-date information about activities, dining options, and travel logistics to suggest a detailed day-by-day vacation plan.*
 *Use Google Search tool to fetch real-time information for:*
