@@ -13,7 +13,7 @@ In this lab we will create an agent using watsonx.ai Agent Lab. Before diving in
 
 # Overview of Agent Lab
 
-The Agent Lab feature of watsoxn.ai enables you to easily build and customize your AI agent with minimal coding. You define the parameters of the interaction between the agent and the end user, including the foundation model, framework, architecture, and tools that the agent uses to accomplish a task.
+The Agent Lab feature of watsonx.ai enables you to easily build and customize your AI agent with minimal coding. You define the parameters of the interaction between the agent and the end user, including the foundation model, framework, architecture, and tools that the agent uses to accomplish a task.
 
 In a real-world scenario, the agent takes the next best step based on the current state of the interaction. The foundation model within the agent picks one or several external tools based on the prompts submitted by the end user. The agent framework then uses a process called tool calling, which is also referred to as function calling, to search for information from multiple sources and generate a response.
 
@@ -65,7 +65,7 @@ Then under the "Instruction" section, you can provide an instruction for how you
 In this example, we are building a Travel Concierge agent that helps the users plan their vacation. Copy the following instruction and paste it in the instruction for this agent.
 
 """
-*You are a vacation planning assistant that helps users plan their vacations.* 
+*You are a react based vacation planning assistant that helps users plan their vacations.* 
 
 *If you were asked for a detailed vacation plan, you must use the budget limit provided by the user and utilize Google Search to retrieve up-to-date information about activities, dining options, and travel logistics to suggest a detailed day-by-day vacation plan.*
 *Use Google Search tool to fetch real-time information for:*
