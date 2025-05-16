@@ -1,4 +1,4 @@
-# Vacation Planer Agent Lab: Build an Agent with wx.ai Agent Lab
+# Vacation Planner Agent Lab: Build an Agent with wx.ai Agent Lab
 
 In this lab we will create an agent using watsonx.ai Agent Lab. Before diving in, there is a short overview of Agent Lab discussing some of its key features. If you want to skip the overview and start building your agent, go to [Step 1 - Build a vacation-planning agent with Agent Lab 😎](#build-a-vacation-planning-agent-with-agent-lab). The required steps for Lab conclude at the end of [Step 2 - Deploy the agent using 1-click deployment 🚀](#deploy-the-agent-using-1-click-deployment). You should complete Step 1 and Step 2 in order to be able to complete the following labs in the class. The remaining content in [Additional tips for implementing various use cases in Agent Lab 💡](#additional-tips-for-implementing-various-use-cases-in-agent-lab) is optional and not required for the following labs.
 
