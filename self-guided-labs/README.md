@@ -15,13 +15,15 @@ In this bootcamp, you will build and deploy an Agentic AI application prototype 
 
 - [**General Use Cases**](./general-use-cases/)
     - watsonx Orchestrate
-        - [AskHR (low-code)](./general-use-cases/orchestrate/ask-hr/)
+        - [AskHR (pre-built demo)](./general-use-cases/orchestrate/AskHR-clickthu/README.md)
+        - [AskHR (low-code)](./general-use-cases/orchestrate/AskHR-wxo/README.md)
     - watsonx Agent Lab
         - [Banking (no-code)](./industrial-use-cases/watsonx.ai-AgentLab/banking/)
 
 - [**Relevant Industry Use Cases**](./industrial-use-cases/)
     - watsonx Orchestrate
         - [Travel & Hotel Booking Agent (no-code)](./industrial-use-cases/orchestrate/travel/)
+        - [Intelligent Automation](./industrial-use-cases/orchestrate/intelligent-assistant/README.md)
         - [Retail Marketing Agent (low-code)](./industrial-use-cases/orchestrate/retail/)
     - watsonx Agent Lab
         - [Travel Vacation Planner Agent (low-code)](./industrial-use-cases/watsonx.ai-AgentLab/travel/)
