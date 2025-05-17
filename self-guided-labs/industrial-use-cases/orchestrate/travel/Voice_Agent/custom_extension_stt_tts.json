@@ -1,0 +1,96 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "FastAPI Chat API",
+      "version": "0.1.0"
+    },
+    "servers": [
+      {
+        "url": "https://application-e0.1tgya61cxec2.us-south.codeengine.appdomain.cloud"
+      }
+    ],
+    "paths": {
+      "/chat": {
+        "post": {
+          "summary": "Chat Endpoint",
+          "operationId": "chat_post",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ChatResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "ChatRequest": {
+          "type": "object",
+          "properties": {
+            "session_id": {
+              "type": "string",
+              "nullable": true,
+              "description": "Optional session identifier."
+            },
+            "user_id": {
+              "type": "string",
+              "description": "user identifier."
+            },
+            "query": {
+              "type": "string",
+              "description": "User's query string.",
+              "example": "What is the weather today?"
+            }
+          },
+          "required": ["query", "user_id"]
+        },
+        "ChatResponse": {
+          "type": "object",
+          "properties": {
+            "session_id": {
+              "type": "string",
+              "description": "Session identifier returned by the API."
+            },
+            "query": {
+              "type": "string",
+              "nullable": true,
+              "description": "The user's query echoed back."
+            },
+            "error": {
+              "type": "string",
+              "nullable": true,
+              "description": "Any error message, if applicable."
+            },
+            "final_response": {
+              "type": "string",
+              "description": "The final response from the system in dictionary format."
+            },
+            "status_code": {
+              "type": "integer",
+              "description": "HTTP status code returned by the API.",
+              "example": 200
+            }
+          },
+          "required": ["session_id", "final_response", "status_code"]
+        }
+      }
+    }
+  }
+  

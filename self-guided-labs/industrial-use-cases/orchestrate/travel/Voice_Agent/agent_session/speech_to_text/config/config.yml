@@ -1,0 +1,19 @@
+app:
+  name: "speech-to-text-api"
+  host: "0.0.0.0"
+  port: 8000
+  log_file: "logs/app.log"
+
+speech_to_text:
+  model: "en-US_BroadbandModel"
+  content_type: "audio/l16; rate=16000"
+  smart_formatting: true
+  word_confidence: false
+  timestamps: false
+  profanity_filter: false
+  speech_detector_sensitivity: 0.5
+  background_audio_suppression: 0.5
+
+text_to_speech:
+  voice: "en-US_LisaV2Voice"
+  accept: 'audio/webm;codecs=opus'

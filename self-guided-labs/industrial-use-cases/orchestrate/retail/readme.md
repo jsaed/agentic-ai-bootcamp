@@ -1,11 +1,11 @@
-# Agentic AI Bootcamp - LangGraph Lab
+# Agentic AI Bootcamp - LangGraph with Watsonx Orchestrate Lab
 
 ## Overview
 This lab demonstrates an **Agentic AI workflow** using **LangGraph** and IBM watsonx.ai with Watsonx Orchestrate. The implementation features two AI agents collaborating in a structured AI-driven workflow.
 
 The main components include:
 - **LangGraph Framework**: Implements AI-driven workflows.
-- **IBM watsonx Orchestrate**: Provides AI agent orchestration capabilities.
+- **IBM Watsonx Orchestrate**: Provides AI agent orchestration capabilities.
 - **Tavily Search API**: Enables web-based information retrieval.
 - **Image Processing with watsonx.ai**: Extracts insights from store shelf images.
 
@@ -362,7 +362,7 @@ This lab demonstrates how to integrate an external AI agent into IBM Watsonx Orc
 2. Navigate to `AI agent configuration` under the `Build` section in the left-hand menu.
 3. Click on `Add agent` to start configuring a new AI agent.
 
-![Accessing AI Agent Configuration](wxo-img/wxo-1.png)
+![Accessing AI Agent Configuration](wxo-img/wxo-111.png)
 
 ### Step 2: Add an External AI Agent
 1. Provide a `Display Name` for the agent (e.g., `FM`).
@@ -371,9 +371,9 @@ This lab demonstrates how to integrate an external AI agent into IBM Watsonx Orc
 4. Input the `Service instance URL` where the agent is hosted (e.g., `xo-ai-agent-langgraph.XXXX.codeengine.appdomain.cloud/chat/completions`).
 5. Click `Connect` to add the agent.
 
-![Accessing AI Agent Configuration](wxo-img/wxo-2.png)
+![Accessing AI Agent Configuration](wxo-img/wxo-112.png)
 
-![Accessing AI Agent Configuration](wxo-img/wxo-3.png)
+![Accessing AI Agent Configuration](wxo-img/wxo-113.png)
 
 ### Step 3: Verify and Configure the Agent
 1. After adding the agent, it appears under the `Agents` list.
@@ -381,9 +381,9 @@ This lab demonstrates how to integrate an external AI agent into IBM Watsonx Orc
 3. Optionally, enable `Show thinking in chat` if desired.
 4. Click `Edit` if any changes are needed.
 
-![Accessing AI Agent Configuration](wxo-img/wxo-4.png) 
+![Accessing AI Agent Configuration](wxo-img/wxo-114.png) 
 
-![Accessing AI Agent Configuration](wxo-img/wxo-5.png)
+![Accessing AI Agent Configuration](wxo-img/wxo-115.png)
 
 
 ### Step 4: Launch the Chat Interface
@@ -391,16 +391,16 @@ This lab demonstrates how to integrate an external AI agent into IBM Watsonx Orc
 2. Click `Launch AI chat` to start interacting with the assistant.
 3. Ensure the agent is visible in the chat sidebar.
 
-![Accessing AI Agent Configuration](wxo-img/wxo-6.png)
+![Accessing AI Agent Configuration](wxo-img/wxo-116.png)
 
-![Accessing AI Agent Configuration](wxo-img/wxo-7.png)
+![Accessing AI Agent Configuration](wxo-img/wxo-117.png)
 
 ### Step 5: Test the Agent
 1. In the chat window, call the agent using the `@FM` command followed by a query (e.g., `@FM Puma and Nike sneakers are on 3 different shelves. The shelves are black and unattractive and the prices are not visible.`)
 2. The AI agent responds with insights, such as market trends and recommendations.
 3. Validate that the agent is providing useful and accurate responses based on the input query.
 
-![Accessing AI Agent Configuration](wxo-img/wxo-8.png)
+![Accessing AI Agent Configuration](wxo-img/wxo-118.png)
 
 By following these steps, you have successfully integrated an external AI agent into IBM Watsonx Orchestrate and verified its functionality through the chat interface.
 

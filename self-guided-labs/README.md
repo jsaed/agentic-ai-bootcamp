@@ -15,11 +15,13 @@ In this bootcamp, you will build and deploy an Agentic AI application prototype 
 
 - [**General Use Cases**](./general-use-cases/)
     - watsonx Orchestrate
-        - [Florin - AskHR](./general-use-cases/orchestrate/AskHR/)  ✅
-- [**Industry Use Cases**](./industrial-use-cases/)
-    - watsonx Orchestrate
-        - [Sabtain - Travel (No-Code)](./industrial-use-cases/orchestrate/travel/) JAMA TO FINALISE TODAY ✅, RAGHAD/KHAWLAH/ATHEER TO TEST+PRACTICE
-        - [EMEA - Retail (Code - LangGraph)](./industrial-use-cases/orchestrate/retail/) COMPLETED ✅ / RAGHAD/KHAWLAH/ATHEER TO TEST+PRACTICE
+        - [AskHR (low-code)](./general-use-cases/orchestrate/ask-hr/)
     - watsonx Agent Lab
-        - [Florin - Travel (Low Code - wx.ai Agent Lab)](./industrial-use-cases/watsonx.ai-AgentLab/travel/) - NEED TO BE TESTED TOMORROW WHEN GITHUB.IBM.COM IS BACK UP AND RUNNING
-        - [Khawlah/Raghad - Banking (No-Code - wx.ai Agent Lab)](./industrial-use-cases/watsonx.ai-AgentLab/banking/) - ✅
+        - [Banking (no-code)](./industrial-use-cases/watsonx.ai-AgentLab/banking/)
+
+- [**Relevant Industry Use Cases**](./industrial-use-cases/)
+    - watsonx Orchestrate
+        - [Travel & Hotel Booking Agent (no-code)](./industrial-use-cases/orchestrate/travel/)
+        - [Retail Marketing Agent (low-code)](./industrial-use-cases/orchestrate/retail/)
+    - watsonx Agent Lab
+        - [Travel Vacation Planner Agent (low-code)](./industrial-use-cases/watsonx.ai-AgentLab/travel/)

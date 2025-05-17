@@ -22,3 +22,8 @@ It is expected that you are already familiar with the topics that will be covere
 - [Bee Agent Framework](https://github.com/i-am-bee/bee-agent-framework)
 - [CrewAI integration with watsonx.ai to build and streamline workflows with multiple AI agents](https://www.ibm.com/new/announcements/announcing-new-crewai-integration-with-watsonx-ai-to-build-and-streamline-workflows-with-multiple-ai-agents)
 - [watsonx Flows Engine](https://www.ibm.com/products/watsonx-ai/flows-engine)
+
+**Overview of Agent AI Frameworks on IBM watsonx.ai**
+- [Bee AI Framework](./self-guided-labs/general-use-cases/wx.ai-bee/readme.md)
+- [CrewAI](./self-guided-labs/general-use-cases/wx.ai-crewai/readme.md)
+- [Langflow](./self-guided-labs/general-use-cases/wx.ai-langflow/README.md)
