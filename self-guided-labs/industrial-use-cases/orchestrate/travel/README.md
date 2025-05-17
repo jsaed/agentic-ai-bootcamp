@@ -66,14 +66,14 @@ This tools allows the agent to:
 - Check the *POST - Confirm hotel booking* operation
 - Click **Done**
 
-This tools allows the agent to:
-- When to **use this tool** (e.g. after user says “`Book this hotel from July 1 to July 4`”) \
-- What **input fields** to collect \
-- How to **call the endpoint** with structured `JSON` \
-- What kind of **response to interpret** and **how to use it** (e.g. display `confirmation_id`) \
-- How to **handle errors** (e.g. bad date range)
-
 ![uploaded-tools.png](./images/uploaded-tools.png)
+
+**Add a Behavior:**
+```
+When using the confirm-booking tool, make sure to use the following date format for the check_in and check_out dates: 2025-07-01.
+
+Try to infer as much information as possible from the conversation to confirm hotel booking.
+```
 
 ### 3. Test the Agent
 Sample prompt: `"Provide me the best hotels in Riyadh"`
