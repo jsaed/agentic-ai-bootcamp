@@ -22,7 +22,7 @@ In this bootcamp, you will build and deploy an Agentic AI application prototype 
 
 - [**Relevant Industry Use Cases**](./industrial-use-cases/)
     - **watsonx Agent Lab**
-        - Advanced - [Travel Vacation Planner Agent (low-code)](./industrial-use-cases/watsonx.ai-AgentLab/travel/)
+        - Beginner - [Travel Vacation Planner Agent (low-code)](./industrial-use-cases/watsonx.ai-AgentLab/travel/)
     - **watsonx Orchestrate**
         - Intermediate - [Travel & Hotel Booking Agent (no-code)](./industrial-use-cases/orchestrate/travel/)
         - Intermediate - [Intelligent Automation](./industrial-use-cases/orchestrate/intelligent-assistant/README.md)

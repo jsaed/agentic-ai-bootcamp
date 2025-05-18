@@ -20,7 +20,7 @@ This Bootcamp covers a rich ecosystem of AI technologies, including:
 
 ###  📌 Getting Started
 1️⃣ **Complete the [Setup Activities](self-guided-labs/lab-0-setup-activities/README.md)** – Run the Labs in a ready-to-use environment \
-2️⃣ **Use Our MURAL [Template](https://app.mural.co/template/e193e58d-71f9-4955-b70a-b0486834d442/fa3056a9-b0ce-45a3-bbf1-dbaa12fc0d0c)** – Bring Your Own Use Case and design your Agentic AI workflows \
+2️⃣ **Use Our MURAL [Template](https://app.mural.co/t/clientengineeringmea0786/m/clientengineeringmea0786/1746619489612/ad31646ea2bd0c167929b75ae8e6178257e5157e?sender=u7d5087fd786eadd379b12927)** – Bring Your Own Use Case and design your Agentic AI workflows \
 3️⃣ [**Pick Your Labs**](./self-guided-labs/README.md) – Choose from the list of Labs, general use-cases or industry-specific \
 4️⃣ **Build, Test, and Iterate!** – Experiment, refine, and enhance your AI solutions
 
