@@ -43,29 +43,39 @@ You must have access to a watsonx.ai SaaS environment and an initialized project
 
 ### Step 1: Get started with Agent Lab
 
-1. From the [watsonx.ai home page](https://dataplatform.cloud.ibm.com/wx/home?context=wx), navigate to a project, and then click the **New asset > Build an AI agent to automate tasks** tile.
+1. If this is your first time in this account, you will need first to create a project to be able to start using Agent Lab. Once you created a project, go to that project, then go to the Assets tab and click on **New asset > Build an AI agent to automate tasks** tile.
 
     ![image](./images/agentlab-1.png)
+
+2. When opening the Agent Lab for the first time, you will need to associate it with an ai runtime service. Click on Associate service.
+
+    ![image](./images/agentlab-1.png)
+
+3. Select the available runtime and click on Associate.
+
+    ![image](./images/agentlab-1.png)
+
+4. Then go back to the tab for creating a new asset and start your Agent Lab asset. This brings us to the main page for cretaing an agent with the Agent Lab. Here, on the left side of the screen under "Build", you can set up and configure your agent, and on the right side under "Agent preview" you will see how those changes are going to be reflected in the agent.
+
+5. Select a foundation model and optionally update model parameters. For details, see [Foundation model configuration](#model).
     
-2. Select a foundation model and optionally update model parameters. For details, see [Foundation model configuration](#model).
+6. To set up your agent, specify a name for the agent and describe the tasks the agent performs in the **Setup** section.
     
-3. To set up your agent, specify a name for the agent and describe the tasks the agent performs in the **Setup** section.
+7. _Optional_: Select an icon and background image to customize how your agent appears in the **Agent Preview** pane.
     
-4. _Optional_: Select an icon and background image to customize how your agent appears in the **Agent Preview** pane.
-    
-5. Select the AI agent framework you want to use to create, deploy and, manage your agent.
+8. Select the AI agent framework you want to use to create, deploy and, manage your agent.
     
     **Note**: Currently, watsonx.ai offers `LangGraph` as the only framework choice.
     
-6. Select the architecture that implements agentic AI reasoning.
+9. Select the architecture that implements agentic AI reasoning.
     
     **Note**: Currently, watsonx.ai offers `ReAct` as the only architecture choice.
     
-7. Define specific instructions for your agent that is used to create a system prompt for the selected foundation model. The instructions can include using a specific language, date or time format, user greeting, or an external tool as an information source instead of a foundation model's knowledge base.
+10. Define specific instructions for your agent that is used to create a system prompt for the selected foundation model. The instructions can include using a specific language, date or time format, user greeting, or an external tool as an information source instead of a foundation model's knowledge base.
     
-8. In the tools section, make sure **No tools** are enabled by default, remove them if needed.
+11. In the tools section, make sure **No tools** are enabled by default, remove them if needed.
 
-9.  Now, we're going to try making an LLM call on a new standard without having any access to tools. Try the following prompt in AgentLab without any tools. 
+12.  Now, we're going to try making an LLM call on a new standard without having any access to tools. Try the following prompt in AgentLab without any tools. 
 
     ```
     Summarise the changes in ASIC's enhanced Banking Code of Practice?
