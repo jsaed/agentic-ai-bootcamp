@@ -28,7 +28,7 @@ Once you've obtained your **IBMid**, navigate to the [IBM TechZone](https://tech
 
 When prompted to login, use your newly created IBMid.
 
-- When prompted, complete the Multi-Factor authentication setup.
+- When prompted, complete the Multi-Factor authentication setup (email is easiest).
 - Read and agree to the *Terms of Service*
 - There will be a `Welcome to IBM Technology Zone!` - you can click skip for now.
 - Navigate to the [Attendee URL](https://techzone.ibm.com/my/workshops/student/681a3aba796fbe5a44f84c30)
