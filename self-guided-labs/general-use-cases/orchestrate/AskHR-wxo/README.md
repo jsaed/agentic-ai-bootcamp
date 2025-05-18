@@ -1,6 +1,6 @@
 # 🧑‍💼 AskHR
 
-<img alt="AskHR" src="assets/hr_landscape.jpg">
+<img alt="AskHR" src="images/hr_landscape.jpg">
 
 One of the main challenges faced by any big organization is their HR operations management. As companies grow in size, it becomes increasingly difficult to get information faster and execute tasks with ease. With the advent of Agentic systems, and the power or reasoning models, it becomes easier to have a single entry point for doing mostly every HR operation.
 
@@ -39,10 +39,9 @@ To streamline employee interactions with HR systems, we have designed an AI-driv
 5. This system leverages watsonx Orchestrate for coordination and advanced reasoning and web-based tasks, offering a comprehensive AI-powered HR support experience.
 
 
-<img alt="AskHR" src="assets/arch_diagm.png">
+<img alt="AskHR" src="images/arch_diagm.png">
 
 ### Architecture Components
-
 
 - **HR Agent and App (IBM watsonx Orchestrate)**: The HR agent acts as the central orchestrator, managing user interactions and delegating tasks to appropriate tools in the HR App.
 
@@ -55,22 +54,7 @@ RAG Agent retrieves relevant information from documents to answer user queries
 
 - **Human Capital Management (HCM) System**: The HR app communicates with the underlying HCM system to fetch or update employee data, ensuring real-time synchronization and accuracy.
 
-
-## 🎥 Demo
-
-
-
-
-
-https://github.ibm.com/skol/agentic-ai-client-bootcamp/assets/449286/49242ff6-57e3-4de8-b0d1-57c97212d590
-
-
-
-
-
-
-> [!IMPORTANT]
-> This lab uses a simulator for a Human Capital Management system. However, this could be easily changed to any real system running in production such as Workday or others.
+> [!IMPORTANT] This lab uses a simulator for a Human Capital Management system. However, this could be easily changed to any real system running in production such as Workday or others.
 
 
 ## 📄 Hands-on step-by-step lab
