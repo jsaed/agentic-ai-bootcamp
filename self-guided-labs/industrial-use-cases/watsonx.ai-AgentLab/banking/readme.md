@@ -23,7 +23,7 @@ Through a series of exercises, you will learn how to:
     - [Step 2: Add a `Google search` tool](#step-2-add-a-google-search-tool)
     - [Step 3: Add a `Webcrawler` tool](#step-3-add-a-webcrawler-tool)
     - [Step 4: Ingest documents for Q\&A](#step-4-ingest-documents-for-qa)
-    - [Step 5: Deploy your Agent](#step-7-deploy-your-agent)
+    - [Step 5: Deploy your Agent](#step-5-deploy-your-agent)
   - [Conclusion](#conclusion)
   - [Additional Resources](#additional-resources)
 
