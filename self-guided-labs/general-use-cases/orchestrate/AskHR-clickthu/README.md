@@ -1,9 +1,11 @@
 # IBM watsonx Orchestrate HR Automation - Click-Through Experience
 
 ## Overview
-This demo provides a guided click-through experience of IBM watsonx Orchestrate in the context of HR automation with Agentic AI. The interactive demonstration showcases how employees and managers can engage with the AI assistant to streamline HR-related tasks efficiently.
+This demo provides a guided click-through experience of IBM Watsonx Orchestrate in the context of HR automation with Agentic AI. The interactive demonstration showcases how employees and managers can engage with the AI assistant to streamline HR-related tasks efficiently.
 
-🚀 [**CLICK HERE TO LAUNCH THE DEMO**](https://cloud-object-storage-cos-static-web-hosting-9uc.s3.us-east.cloud-object-storage.appdomain.cloud/index.html)
+[**OPTION1: Click here to start the demo in integrated website**](https://cloud-object-storage-cos-static-web-hosting-9uc.s3.us-east.cloud-object-storage.appdomain.cloud/index.html)
+
+[**OPTION2: Click here to start the demo as standalone**](https://askhr.s3.us-east.cloud-object-storage.appdomain.cloud/index.html)
 
 ## Demo Experience
 This interactive experience consists of two key perspectives:
@@ -88,3 +90,12 @@ This interactive experience consists of two key perspectives:
 ### 🔹 Conversational Skills
 - Automates HR workflows seamlessly with a no-code approach.
 - Integrates with HR systems like Workday for direct execution of tasks.
+
+---
+
+## Demo Notes
+- The demo is **actively evolving**, so check back for updates before showcasing.
+- Some features (e.g., clickable enroll buttons) will be added in future iterations.
+- Ensure to highlight **Conversational Search, Custom Cards, and Intelligent Context Gathering** during demonstrations.
+
+[**Start the Demo**](https://cloud-object-storage-cos-static-web-hosting-9uc.s3.us-east.cloud-object-storage.appdomain.cloud/index.html)
