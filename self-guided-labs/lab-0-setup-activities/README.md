@@ -24,12 +24,14 @@ Select your preferred verification method. When completed, the user account is c
 ![create-IBMid2.png](images/create-IBMid2.png)
 
 ### 2. Access your workshop environment via the Attendee URL
-Once you've obtained your **IBMid**, navigate to the [Attendee URL](https://techzone.ibm.com/my/workshops/student/681a3aba796fbe5a44f84c30)
+Once you've obtained your **IBMid**, navigate to the [IBM TechZone](https://techzone.ibm.com/)
 
 When prompted to login, use your newly created IBMid.
 
+- When prompted, complete the Multi-Factor authentication setup.
 - Read and agree to the *Terms of Service*
 - There will be a `Welcome to IBM Technology Zone!` - you can click skip for now.
+- Navigate to the [Attendee URL](https://techzone.ibm.com/my/workshops/student/681a3aba796fbe5a44f84c30)
 - Enter the workshop password/access code: `RiyadhAir@2025`
 
 ![attendee-url.png](images/attendee-url.png)
