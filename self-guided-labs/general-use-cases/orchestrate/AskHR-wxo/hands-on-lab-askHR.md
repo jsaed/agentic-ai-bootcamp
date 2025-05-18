@@ -104,7 +104,7 @@ When the user requests time off, convert the dates to YYYY-MM-DD format, e.g. 5/
 
  <img width="1000" alt="image" src="images/hr_step12.png">
 
-13. Test your agent in the preview chat on the right side by asking the following questions and validating the responses.  They should look similar to what is shown in the screenshots below:
+13. Test your agent in the preview chat on the right side, start by providing the employee name (here is a list of laoded employees) [users_data.xlsx](/self-guided-labs/general-use-cases/orchestrate/AskHR-wxo/hands-on-lab-askHR.md#:~:text=users_data.xlsx) and then asking the following questions and validating the responses.  They should look similar to what is shown in the screenshots below:
 
 ```
 1. Give me an overview of my employee benefits
