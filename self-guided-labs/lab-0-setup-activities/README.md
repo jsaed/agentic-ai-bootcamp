@@ -19,18 +19,12 @@ Select your preferred verification method. When completed, the user account is c
 ![create-IBMid.png](images/create-IBMid.png)
 
 - After completing the above steps you will see the landing page for My IBM, logged in with your new IBMid.
+> **Important**: *You may see a Trial IBM Cloud account with a "Launch" button. Do not click this, becasue we will provide you with a dedicated Cloud Account for these Labs.*
 
 ![create-IBMid2.png](images/create-IBMid2.png)
 
-### 2. Accept the invitation to join the IBM Cloud Account
-After completing the above steps, you will be sent an invitation to join the IBM Cloud Account associated with your unique environment. This will take approx. 5 mins to arrive, so be patient!
-
-![join-cloud-account.png](images/join-cloud-account.png)
-
-❗ Click `Join now` to accept the invite. You will be asked to log into IBM Cloud (use the IBMid credentials created earlier).
-
-### 3. Access your workshop environment via the Attendee URL
-Once you've obtained your **IBMid**, and joined the **IBM Cloud account**, navigate to the [Attendee URL](https://techzone.ibm.com/my/workshops/student/681a3aba796fbe5a44f84c30)
+### 2. Access your workshop environment via the Attendee URL
+Once you've obtained your **IBMid**, navigate to the [Attendee URL](https://techzone.ibm.com/my/workshops/student/681a3aba796fbe5a44f84c30)
 
 When prompted to login, use your newly created IBMid.
 
@@ -39,6 +33,13 @@ When prompted to login, use your newly created IBMid.
 - Enter the workshop password/access code: `RiyadhAir@2025`
 
 ![attendee-url.png](images/attendee-url.png)
+
+### 3. Accept the invitation to join the IBM Cloud Account
+After completing the above steps, you will be sent an invitation to join the IBM Cloud Account associated with your unique environment. This will take approx. 5 mins to arrive, so be patient!
+
+![join-cloud-account.png](images/join-cloud-account.png)
+
+❗ Click `Join now` to accept the invite. You will be asked to log into IBM Cloud (use the IBMid credentials created earlier).
 
 Once logged in, you will see the Service URLs to access the environments!
 
