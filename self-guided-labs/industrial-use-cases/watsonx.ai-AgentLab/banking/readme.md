@@ -49,11 +49,11 @@ You must have access to a watsonx.ai SaaS environment and an initialized project
 
 2. When opening the Agent Lab for the first time, you will need to associate it with an ai runtime service. Click on Associate service.
 
-    ![image](./images/agentlab-1.png)
+    ![image](./images/agentlab-8.png)
 
 3. Select the available runtime and click on Associate.
 
-    ![image](./images/agentlab-1.png)
+    ![image](./images/agentlab-9.png)
 
 4. Then go back to the tab for creating a new asset and start your Agent Lab asset. This brings us to the main page for cretaing an agent with the Agent Lab. Here, on the left side of the screen under "Build", you can set up and configure your agent, and on the right side under "Agent preview" you will see how those changes are going to be reflected in the agent.
 
