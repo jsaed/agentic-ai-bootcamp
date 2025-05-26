@@ -1,6 +1,6 @@
 # Riyadh Air - Agentic AI Technical Hands-on Labs
 
-![screenshot](./images/Riyadh_Air_Logo.svg.png)
+![screenshot](./images/STC-01.png)
 
 ### 🧠 What is the Agentic AI Bootcamp?
 
