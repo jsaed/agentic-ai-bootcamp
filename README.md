@@ -1,4 +1,4 @@
-# Riyadh Air - Agentic AI Technical Hands-on Labs
+# STC - Agentic AI Technical Hands-on Labs
 
 ![screenshot](./images/STC-01.png)
 
