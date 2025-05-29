@@ -22,8 +22,7 @@ Through a series of exercises, you will learn how to:
     - [Step 1: Get started with Agent Lab](#step-1-get-started-with-agent-lab)
     - [Step 2: Add a `Google search` tool](#step-2-add-a-google-search-tool)
     - [Step 3: Add a `Webcrawler` tool](#step-3-add-a-webcrawler-tool)
-    - [Step 4: Ingest documents for Q\&A](#step-4-ingest-documents-for-qa)
-    - [Step 5: Deploy your Agent](#step-5-deploy-your-agent)
+    - [Step 4: Deploy your Agent](#step-4-deploy-your-agent)
   - [Conclusion](#conclusion)
   - [Additional Resources](#additional-resources)
 
@@ -98,7 +97,6 @@ https://github.com/docling-project/docling/tree/main
 
 **Note** that the agent has been able to provide a summary documentation report including introduction, key components and dependencies, and recent changes. 
 
-
 ### Step 2: Add a `Google search` tool
 
 Now we'll add the Google Tool and try the same prompt:
@@ -133,37 +131,11 @@ What if we wanted to get details from a specific website? Well, Fahad could use 
     can you create an application documentation from the following git repo: https://github.com/docling-project/docling/tree/main
     ```
 
-    ![image](./images/agentlab-4.png)
+    ![image](./images/agent-web-prompt.png)
 
 **Note** that now, your agent will summarise the details from that specific website by crawling that page directly.
 
-### Step 4: Ingest documents for Q&A
-
-But Billie needs some more details, what if she had a specific document that she wanted to ground her answers in, rather than using a site what if there was an internal policy:
-
-1. Save your agent in your project by clicking the save Icon on the top, and **Save as**. Select **Agent** and click **Save**.
-2. Navigate to your watsonx.ai project, and then click the **New asset > Ground gen AI with vectorized documents** tile.
-3. Upload the attached `lenders_mortgage_insurance.pdf` document, give it the following description, then click **Create**.
-    ```
-    The following document contains details about CommBank's lenders mortgage insurance policy. When it might apply, product disclosures, faqs and provides an overall guide.
-    ```
-4. In your project, open your agent in the Agent Lab.
-5. In the **Tools** section, click **Add a tool** and select the **Document search** and select the `lenders_mortgage_insurance` vector index that your just created. Click **Select**.
-6. Just like that, you've enabled your agent to use RAG and ground some of it's answers in the document, you can test it by asking one of the following:
-
-    ```
-    when would LMI apply?
-    ```
-
-    ```
-    what is the minimum deposit that would not require LMI?
-    ```
-
-    ![image](./images/agentlab-5.png)
-
-**Note** that your agent uses the `RAGQuery` tool to answer your question from the document.
-
-### Step 5: Deploy your Agent
+### Step 4: Deploy your Agent
 
 You are now ready to deploy your agent as a new AI service:
 
