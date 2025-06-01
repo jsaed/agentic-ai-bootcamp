@@ -1,0 +1,87 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Fee Reversal Payment",
+      "version": "1.0.0",
+      "description": "Creates a fee reversal payment to a customer's account by IBAN."
+    },
+    "servers": [
+      {
+        "url": "https://wxo-corebanking-backend.1944johjccn7.eu-de.codeengine.appdomain.cloud",
+        "description": "Production Endpoint"
+      }
+    ],
+    "paths": {
+      "/fee-reversal": {
+        "post": {
+          "summary": "Process a fee reversal to an account",
+          "description": "Takes an IBAN and amount, then posts a fee reversal transaction.",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "iban": {
+                      "type": "string",
+                      "example": "DE89320895326389021994",
+                      "description": "The IBAN of the account to process the fee reversal for"
+                    },
+                    "amount_eur": {
+                      "type": "number",
+                      "example": 50.00,
+                      "description": "The amount to reverse in EUR"
+                    }
+                  },
+                  "required": ["iban", "amount_eur"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Fee reversal processed successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "status": { "type": "string" },
+                      "iban": { "type": "string" },
+                      "customer_name": { "type": "string" },
+                      "amount_eur": { "type": "number" },
+                      "transaction_id": { "type": "string" },
+                      "booking_ts": { "type": "string" },
+                      "new_balance_eur": { "type": "number" },
+                      "message": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "detail": "Invalid amount"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "IBAN not found",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "detail": "IBAN not found"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}

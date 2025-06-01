@@ -1,0 +1,86 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Overdraft Limit Approval",
+      "version": "1.0.0",
+      "description": "Sets or changes the overdraft limit for a customer's account by IBAN."
+    },
+    "servers": [
+      {
+        "url": "https://wxo-corebanking-backend.1944johjccn7.eu-de.codeengine.appdomain.cloud",
+        "description": "Production Endpoint"
+      }
+    ],
+    "paths": {
+      "/approve-overdraft": {
+        "post": {
+          "summary": "Approve or modify overdraft limit for an account",
+          "description": "Takes an IBAN and overdraft amount, then sets the specified overdraft limit.",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "iban": {
+                      "type": "string",
+                      "example": "DE89320895326389021994",
+                      "description": "The IBAN of the account to set the overdraft limit for"
+                    },
+                    "overdraft_limit_eur": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 10000,
+                      "example": 5000,
+                      "description": "The overdraft limit to set (between 0 and 10,000 EUR)"
+                    }
+                  },
+                  "required": ["iban", "overdraft_limit_eur"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Overdraft limit updated successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "account_id": { "type": "string" },
+                      "iban": { "type": "string" },
+                      "customer_name": { "type": "string" },
+                      "overdraft_limit_eur": { "type": "number" },
+                      "message": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid input",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "detail": "Overdraft limit must be between 0 and 10,000 EUR"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "IBAN not found",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "detail": "IBAN not found"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
