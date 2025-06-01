@@ -140,17 +140,28 @@ What if we wanted to get details from a specific website? Well, Fahad could use 
 You are now ready to deploy your agent as a new AI service:
 
 1. In the top action bar, click **Deploy**.
-2. Select your target deployment space. If you don't have one, you can [create](https://www.ibm.com/docs/en/watsonx/saas?topic=spaces-creating-deployment) one.
+2. Select your target deployment space. If you don't have one, you can [create](https://www.ibm.com/docs/en/watsonx/saas?topic=spaces-creating-deployment) one as follows:
+    - Click **New Deployment Space**.
+    ![image](./images/new-deploy.png)
+    - Define deployment details, **Name, Stage, Storage** then click **Create**.
+    - Wait till the deployment space is ready then Click **View new space**
+    ![image](./images/deployment-ready.png)
+    - In the Deployment space, go to the **Manage tab** > click on **Associate instance** to associate a watsonx.ai runtime service
+    ![image](./images/deployment-runtime-service.png)
+    - Go back the **Deploy AI Service** tab and click **Reload** to see the created deployment space > Select your target deployment.
+    ![image](./images/new-deploy.png)
+    ![image](./images/reload-deployment-space.png)
+    - Before you **Deploy** agent, you need to **Create a user API Key** > once created, go back to **Deploy AI Service** and click **Deploy**.
+    ![image](./images/deployment-user-key.png)
 3. After a few seconds, your watsonx Agent will be initialized and deployed in the target deployment space.
 4. Once deployed, click on your new agent and test it by asking it any of the previous questions in the **Preview** section:
-
-    ![image](./images/agentlab-7.png)
+    ![image](./images/preview-agent.png)
 
 This concludes the lab exercise.
 
 ## Conclusion
 
-In this hands-on lab, you learned how to build agentic workflows using AgentLab. You used the WebCrawler tool, used RAG, and deployed an agent with a custom tool. By applying these skills, you can automate tasks and make informed decisions in your own organization.
+In this hands-on lab, you learned how to build agentic workflows using AgentLab. You used the WebCrawler tool, and deployed an agent with a custom tool. By applying these skills, you can automate tasks and make informed decisions in your own organization.
 
 ## Additional Resources
 
