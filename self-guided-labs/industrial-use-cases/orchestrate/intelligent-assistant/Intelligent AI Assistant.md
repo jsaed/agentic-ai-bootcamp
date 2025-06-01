@@ -396,8 +396,8 @@ On the following screen, enter details about the imported agent:
 - Agent details
   - Provider: `watsonx.ai`
   - Authentication type: leave as `API key`
-  - API key: enter the key provided to you by your instructor
-  - Service instance URL: enter the value provided to you by your instructor
+  - Service instance URL: `https://us-south.ml.cloud.ibm.com/ml/v4/deployments/80ecbdc9-8fc3-4703-8330-0d1103d443a8/ai_service_stream?version=2021-05-01`
+  - API key: THIS WILL BE PROVIDED BY THE INSTRUCTOR
 - Define new agent
   - Display name: `TrafficAgent` (the name cannot contain a space)
   - Description of agent capabilities: `The TrafficAgent agent provides information about traffic in any given location.`
