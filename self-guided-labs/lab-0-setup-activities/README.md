@@ -31,8 +31,8 @@ When prompted to login, use your newly created IBMid.
 - When prompted, complete the Multi-Factor authentication setup (email is easiest).
 - Read and agree to the *Terms of Service*
 - There will be a `Welcome to IBM Technology Zone!` - you can click skip for now.
-- Navigate to the [Attendee URL](https://techzone.ibm.com/my/workshops/student/681a3aba796fbe5a44f84c30)
-- Enter the workshop password/access code: `RiyadhAir@2025`
+- Navigate to the [Attendee URL](https://techzone.ibm.com/my/workshops/student/683586f1819e3711c924766f)
+- Enter the workshop password/access code: `STC@2025`
 
 ![attendee-url.png](images/attendee-url.png)
 
