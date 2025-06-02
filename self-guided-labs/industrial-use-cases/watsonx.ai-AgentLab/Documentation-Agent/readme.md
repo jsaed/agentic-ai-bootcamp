@@ -155,7 +155,7 @@ You are now ready to deploy your agent as a new AI service:
     ![image](./images/deployment-user-key.png)
 3. After a few seconds, your watsonx Agent will be initialized and deployed in the target deployment space.
 4. Once deployed, click on your new agent and test it by asking it any of the previous questions in the **Preview** section:
-    ![image](./images/preview-agent.png)
+    ![image](./images/agent-preview.png)
 
 This concludes the lab exercise.
 
