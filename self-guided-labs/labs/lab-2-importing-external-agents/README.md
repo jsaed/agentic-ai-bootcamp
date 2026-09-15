@@ -57,7 +57,7 @@ Your instructor has already deployed a LangGraph agent for you to import. Now we
 
 7. Fill in the connection details provided by your instructor:
 
-   **Endpoint URL**: (Provided by your instructor instructor)
+   **Endpoint URL**: https://car-buying-agent.2et97dgs5u89.ca-tor.codeengine.appdomain.cloud/v1/chat
 
    **Authentication type**: Select **API Key**
 
@@ -81,6 +81,17 @@ Your instructor has already deployed a LangGraph agent for you to import. Now we
    ```
 
    ![Define new agent](images/google_search_define_agent.png)
+   ![Connect](images/connect.png)
+   ![Connect Add](images/connect-add.png)
+   ![Connect Add API](images/connect-add-api.png)
+
+   Click Paste Draft Configuration
+
+   ![Connect Add API Draft](images/connect-add-api-draft.png)
+
+
+
+
 
    Then click on **Import Agent**
 

@@ -31,7 +31,7 @@ In this lab, you will help Imani implement **Agentic AI Controls and Governance*
 
 ## 🎰 Check the Demo
 
-This is the final result of what you will be building across Labs 1–8. Explore the Agentic Control Plane to see the finished dashboard, alerts, and agent analytics in action before you start building.
+This is the final result of what you will be building across Labs 1–8. Explore the [Agentic Control Plane](https://wxdemo.ibm.com/) to see the finished dashboard, alerts, and agent analytics in action before you start building.
 
 ![watsonx Orchestrate Agentic Control Plane overview dashboard](images/control-plane-dashboard.png)
 
@@ -52,7 +52,7 @@ Across Labs 1–8 you'll add governance controls (guardrails, PII protection, mo
 
 **Participants:**
 - Access to a watsonx Orchestrate instance
-- Third-party Agent endpoint URL (provided by instructor)
+- Third-party Agent endpoint URL: https://car-buying-agent.2et97dgs5u89.ca-tor.codeengine.appdomain.cloud/v1/chat
 - Third-party Agent API key (provided by instructor)
 - Vehicle Catalog in PDF
 
