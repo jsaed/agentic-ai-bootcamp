@@ -1,0 +1,70 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Dealership Vehicle Data API",
+    "description": "Looks up vehicle model information from the vehicle database. Use for questions about which models exist for a given car make.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://vpic.nhtsa.dot.gov/api"
+    }
+  ],
+  "paths": {
+    "/vehicles/getmodelsformake/{make}": {
+      "get": {
+        "operationId": "get_models_for_make",
+        "summary": "Get all vehicle models for a car make",
+        "description": "Returns the list of vehicle models for the given make (e.g. porsche, hyundai, kia) from the vehicle database.",
+        "parameters": [
+          {
+            "name": "make",
+            "in": "path",
+            "required": true,
+            "description": "The vehicle make to look up, e.g. porsche, hyundai, kia, nissan",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "required": true,
+            "description": "Response format. Always use json.",
+            "schema": {
+              "type": "string",
+              "enum": ["json"],
+              "default": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of vehicle models for the make",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Count": { "type": "integer" },
+                    "Message": { "type": "string" },
+                    "Results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Make_Name": { "type": "string" },
+                          "Model_Name": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
