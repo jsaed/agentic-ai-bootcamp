@@ -48,7 +48,7 @@ In this lab we use the **NHTSA vPIC API**, a free, public, no-authentication veh
 
 ### Part 1: Open the Car Research Agent
 
-1. Access the **control plane** [here](https://ap-south-1.dl.watson-orchestrate.ibm.com/home).
+1. Access the **control plane** [here](https://eu-central-1.dl.watson-orchestrate.ibm.com/).
 
 ![homepage](images/control_plane_homepage.png)
 
