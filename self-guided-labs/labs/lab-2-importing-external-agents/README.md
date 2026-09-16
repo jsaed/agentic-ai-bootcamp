@@ -61,7 +61,7 @@ Your instructor has already deployed a LangGraph agent for you to import. Now we
 
    **Authentication type**: Select **API Key**
 
-   **API Key Value**: (Provided by your instructor)
+   **API Key Value**: 6wFBOY7krKhXm0rDWqlvrRkQozSxRvhixrSkbVFno6WH
 
 > [!Note]
 > Instructors must complete the instructor guide to provide participants with the Agent Endpoint URL and the API Key, which is required for the this lab.
