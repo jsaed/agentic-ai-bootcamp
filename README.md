@@ -1,5 +1,6 @@
 # Mobily - Agentic AI & Governance Technical Hands-on Labs
 
+![Mobily Logo](https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Mobily_logo.svg/320px-Mobily_logo.svg.png)
 ![agentic](./images/agentic.png)
 
 ### 🧠 Welcome to the AI Governance Workshop!
