@@ -1,6 +1,5 @@
-# Saudi Aramco - Agentic AI & Governance Technical Hands-on Labs
+# Mobily - Agentic AI & Governance Technical Hands-on Labs
 
-![screenshot](./images/aramco-logo.jpg)
 ![agentic](./images/agentic.png)
 
 ### 🧠 Welcome to the AI Governance Workshop!

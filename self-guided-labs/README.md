@@ -1,4 +1,4 @@
-# Saudi Aramco - Control and Govern AI Agents — Hands-on Lab
+# Mobily - Control and Govern AI Agents — Hands-on Lab
 
 ![banner-governance](images/banner-governance.png)
 
