@@ -57,11 +57,11 @@ Your instructor has already deployed a LangGraph agent for you to import. Now we
 
 7. Fill in the connection details provided by your instructor:
 
-   **Endpoint URL**: https://car-buying-agent.2et97dgs5u89.ca-tor.codeengine.appdomain.cloud/v1/chat
+   **Endpoint URL**: https://car-agent-655459409396.us-central1.run.app
 
    **Authentication type**: Select **API Key**
 
-   **API Key Value**: 6wFBOY7krKhXm0rDWqlvrRkQozSxRvhixrSkbVFno6WH
+   **API Key Value**: ask the instructor
 
 > [!Note]
 > Instructors must complete the instructor guide to provide participants with the Agent Endpoint URL and the API Key, which is required for the this lab.

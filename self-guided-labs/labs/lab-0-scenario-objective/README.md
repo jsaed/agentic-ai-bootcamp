@@ -52,7 +52,7 @@ Across Labs 1–8 you'll add governance controls (guardrails, PII protection, mo
 
 **Participants:**
 - Access to a watsonx Orchestrate instance
-- Third-party Agent endpoint URL: https://car-buying-agent.2et97dgs5u89.ca-tor.codeengine.appdomain.cloud/v1/chat
+- Third-party Agent endpoint URL: https://car-agent-655459409396.us-central1.run.app
 - Third-party Agent API key (provided by instructor)
 - Vehicle Catalog in PDF
 
