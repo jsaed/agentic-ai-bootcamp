@@ -15,7 +15,6 @@ This Bootcamp covers a rich ecosystem of AI technologies, including:
 
 - [**IBM watsonx Orchestrate**](https://www.ibm.com/products/watsonx-orchestrate) – A comprehensive agent management platform to build and manage all your AI agents in one control plane
 - [**AI Agentic Control Plane**](https://www.ibm.com/watsonx/ai) – One control plane for AI agents
-- [**IBM watsonx.governance**](https://www.ibm.com/products/watsonx-governance) - Govern any AI, anywhere with real-time visibility, enterprise controls, and continuous accountability
 
 ###  📌 Getting Started
 1️⃣ **Complete the [**Setup Activities**](self-guided-labs/labs/lab-0-scenario-objective/README.md)** – Run the Labs in a ready-to-use environment \
